@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- Java bean  -->
+	 
+	<bean class="com.learn.collection.Emp" name="emp1">
+		
+		<property name="name" value="Sandip"/>
+			
+			
+		<!-- If there is only one element in any collection 
+		     then no need to provide collection name -->
+		     
+		<property name="phones">
+			<list>
+				<value>9191991919</value>
+				<value>9291991929</value>
+				<value>9281991928</value>	
+				<null/>			
+			</list>
+		</property>
+		
+		<property name="addresses">
+			<set>
+				<value>Jamnagar</value>
+				<value>Nadiad</value>
+			</set>
+		</property>
+		
+		<property name="courses">
+			<map>
+				<entry key="Java" value="3 months"/>
+				<entry key="Python" value="2 months"/>
+				<entry key="C++" value="1 months"/>
+			</map>
+		</property>
+		
+		
+		<property name="prop">
+			<props>
+				<prop key="uname">KSandip</prop>
+				<prop key="pass">KSA</prop>
+			</props>
+		</property>
+		
+	</bean>
+	
+	
+   	
+</beans>
